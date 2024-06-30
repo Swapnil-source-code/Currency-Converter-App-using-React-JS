@@ -101,3 +101,44 @@ button{
   background-color: #e5dbff;
   padding: 0.8em 0;
 }
+
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 768px) {
+  .wrapper {
+    width: 45%;
+    padding: 1.5em;
+  }
+  .app-icon {
+    width: 6.5em;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+  }
+  .app-title {
+    font-size: 1.25em;
+    margin-bottom: 1.5em;
+  }
+  button {
+    padding: 0.5em 0;
+  }
+}
+
+ /* Media Query for Mobile Devices */
+ @media (max-width: 480px) {
+  .wrapper {
+    padding: 1.25em;
+  }
+  .app-icon {
+    width: 6.37em;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  .app-title {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+  }
+  button {
+    padding: 0.5em 0;
+  }
+}
+
