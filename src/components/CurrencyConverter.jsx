@@ -54,6 +54,7 @@ const CurrencyConverter = () => {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             defaultValue={100}
+            placeholder='enter your amount'
           />
 
           <div className="dropdowns">
