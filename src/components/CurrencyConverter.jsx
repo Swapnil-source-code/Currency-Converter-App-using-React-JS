@@ -63,7 +63,7 @@ const CurrencyConverter = () => {
               <option key={currency} value={currency}>{currency}</option>
             ))}
             </select>
-
+            <label htmlFor="amount"> TO </label>
             <select id="to-currency-select" value={toCurrency} onChange={(e) => setToCurrency(e.target.value)}>
             {currency_code.map((currency) => (
               <option key={currency} value={currency}>{currency}</option>
