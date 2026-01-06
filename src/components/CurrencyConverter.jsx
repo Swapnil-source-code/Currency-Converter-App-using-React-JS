@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 
 const CurrencyConverter = () => {
   
-  const api = `https://v6.exchangerate-api.com/v6/${import.meta.env.VITE_API_KEY}/latest/USD`;
+  const api = `https://v6.exchangerate-api.com/v6/${import.meta.env.EXCHANGERATE_API_KEY}/latest/USD`;
 
   const [fromCurrency, setFromCurrency] = useState("USD");
   const [toCurrency, setToCurrency] = useState("INR");
