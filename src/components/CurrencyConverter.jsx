@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react'
 
 const CurrencyConverter = () => {
   
-  const api = `https://v6.exchangerate-api.com/v6/${import.meta.env.EXCHANGERATE_API_KEY}/latest/USD`;
+  const api = `/.netlify/functions/currency?base=${fromCurrency}&target=${toCurrency}&amount=${amount}`;
 
   const [fromCurrency, setFromCurrency] = useState("USD");
   const [toCurrency, setToCurrency] = useState("INR");
