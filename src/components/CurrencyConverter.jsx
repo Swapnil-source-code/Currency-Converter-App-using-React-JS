@@ -6,8 +6,6 @@ import { useState, useEffect } from 'react'
 
 const CurrencyConverter = () => {
   
-  const api = `/.netlify/functions/currency?base=${fromCurrency}&target=${toCurrency}&amount=${amount}`;
-
   const [fromCurrency, setFromCurrency] = useState("USD");
   const [toCurrency, setToCurrency] = useState("INR");
   const [amount, setAmount] = useState("");
@@ -20,7 +18,7 @@ const CurrencyConverter = () => {
 
   const convertCurrency = () => {
     if (amount.length !== 0) {
-      fetch(api)
+      fetch(`/.netlify/functions/currency?base=${fromCurrency}&target=${toCurrency}&amount=${amount}`)
         .then((resp) => resp.json())
         .then((data) => {
           let fromExchangeRate = data.conversion_rates[fromCurrency];
